@@ -50,9 +50,9 @@ public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = "gs://imagesin/" + fileName;
+            String pathToFileIn = "<your BUCKETIN path>" + fileName;
             Instant timestamp = Instant.now();
-  	        String pathToFileOut = "gs://imagesout/" + label + "/" + timestamp.toString() + "-rot90-" + fileName;
+  	        String pathToFileOut = "<your BUCKETOUT path>" + label + "/" + timestamp.toString() + "-rot90-" + fileName;
   	        
             ReadableByteChannel rChan;
             try {
@@ -97,9 +97,9 @@ public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = "gs://imagesin/" + fileName;
+            String pathToFileIn = "<your BUCKETIN path>" + fileName;
             Instant timestamp = Instant.now();
-  	        String pathToFileOut = "gs://imagesout/" + label + "/" + timestamp.toString() + "-rot270-" + fileName;
+  	        String pathToFileOut = "<your BUCKETOUt path>" + label + "/" + timestamp.toString() + "-rot270-" + fileName;
   	        
             ReadableByteChannel rChan;
             try {
@@ -141,9 +141,9 @@ public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = "gs://imagesin/" + fileName;
+            String pathToFileIn = "<your BUCKETIN path>" + fileName;
             Instant timestamp = Instant.now();
-  	        String pathToFileOut = "gs://imagesout/" + label + "/" + timestamp.toString() + "-flipV-" + fileName;
+  	        String pathToFileOut = "<your BUCKETOUT path>" + label + "/" + timestamp.toString() + "-flipV-" + fileName;
   	        
             ReadableByteChannel rChan;
             try {
@@ -187,9 +187,9 @@ public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = "gs://imagesin/" + fileName;
+            String pathToFileIn = "<your BUCKETIN path>" + fileName;
             Instant timestamp = Instant.now();
-  	        String pathToFileOut = "gs://imagesout/" + label + "/" + timestamp.toString() + "-gray-" + fileName;
+  	        String pathToFileOut = "<your BUCKETOUT path>" + label + "/" + timestamp.toString() + "-gray-" + fileName;
   	        
             ReadableByteChannel rChan;
             try {
@@ -234,9 +234,9 @@ public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = "gs://imagesin/" + fileName;
+            String pathToFileIn = "<your BUCKETIN path>" + fileName;
             Instant timestamp = Instant.now();
-  	        String pathToFileOut = "gs://imagesout/" + label + "/" + timestamp.toString() + "-copy-" + fileName;
+  	        String pathToFileOut = "<your BUCKETOUT path>" + label + "/" + timestamp.toString() + "-copy-" + fileName;
   	        //build the ResourceIds and related list (in and out)
 	  	    List<ResourceId> listIn = new ArrayList<ResourceId> ();   
 	        List<ResourceId> listOut = new ArrayList<ResourceId> ();        				
