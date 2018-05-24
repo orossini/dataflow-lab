@@ -31,7 +31,11 @@ import java.awt.image.BufferedImage;
 
 
 public class ImagesPipeline1 {
-	private static final Logger LOG = LoggerFactory.getLogger(ImagesPipeline1.class);
+	
+	private static final String PROJECT_ID =  "";
+	private static final String BUCKET_IN_PATH = "";
+	private static final String BUCKET_OUT_PATH = "";
+	private static final String TOPIC_URI =  "";
 	
 	
 	public static class CopyImages extends DoFn<PubsubMessage, String>{
