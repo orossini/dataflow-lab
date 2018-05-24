@@ -17,16 +17,16 @@ import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.ParDo;
-import org.apache.beam.sdk.transforms.DoFn.ProcessContext;
-import org.apache.beam.sdk.transforms.DoFn.ProcessElement;
+//import org.apache.beam.sdk.transforms.DoFn.ProcessContext;
+//import org.apache.beam.sdk.transforms.DoFn.ProcessElement;
 import org.apache.beam.sdk.values.PCollection;
 import com.google.common.io.ByteStreams;
-
-import dataflowlab.ImagesPipeline.CopyImages;
-import dataflowlab.ImagesPipeline.FlipImages;
-import dataflowlab.ImagesPipeline.GrayImages;
-import dataflowlab.ImagesPipeline.RotateImages270;
-import dataflowlab.ImagesPipeline.RotateImages90;
+//
+//import dataflowlab.ImagesPipelineComplete.CopyImages;
+//import dataflowlab.ImagesPipelineComplete.FlipImages;
+//import dataflowlab.ImagesPipelineComplete.GrayImages;
+//import dataflowlab.ImagesPipelineComplete.RotateImages270;
+//import dataflowlab.ImagesPipelineComplete.RotateImages90;
 
 import java.io.InputStream;
 import java.io.ByteArrayOutputStream;
@@ -38,7 +38,7 @@ import org.imgscalr.Scalr.Rotation;
 import java.awt.image.BufferedImage;
 
 
-public class ImagesPipeline {
+public class ImagesPipelineComplete{
 
 public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 		

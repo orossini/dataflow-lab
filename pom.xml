@@ -423,6 +423,8 @@
               </rules>
             </configuration>
           </execution>
+          
+          <!--  
           <execution>
             <id>enforce-banned-dependencies</id>
             <goals>
@@ -440,6 +442,8 @@
               <fail>true</fail>
             </configuration>
           </execution>
+          -->
+          
         </executions>
         <dependencies>
           <dependency>
