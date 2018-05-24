@@ -1,13 +1,12 @@
 #!/bin/bash
-# startup script for dataflow lab
+#test startup-script for vm-dev in qwiklab DM script
 
-gcloud pubsub topics create devicesdata
-echo "pubsub topic created"
-gsutil mb -c regional -l europe-west1 gs://$PROJECTID-imagesin
-export BUCKETIN=gs://$PROJECTID-imagesin
-gsutil mb -c regional -l europe-west1 gs://$PROJECTID-imagesout
-export BUCKETOUT=gs://$PROJECTID-imagesout
-gsutil mb -c regional -l europe-west1 gs://$PROJECTID-dataflowstagging
-echo "buckets created"
-exit 0
+sudo apt-get install -y openjdk-8-jdk
+# java will be installed in /usr/lib/jvm/java-8-openjdk-amd64/
+echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> ~/.profile
+echo "export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin" >> ~/.profile
+wget http://www-us.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
+tar xzvf apache-maven-3.5.3-bin.tar.gz
+echo "export PATH=$PATH:/apache-maven-3.5.3/bin" >> ~/.profile
+
 
