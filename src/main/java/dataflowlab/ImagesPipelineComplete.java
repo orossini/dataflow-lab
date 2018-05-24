@@ -39,6 +39,7 @@ import java.awt.image.BufferedImage;
 
 
 public class ImagesPipelineComplete{
+	private static final String BUCKET_NAME = "";
 
 public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 		
@@ -229,9 +230,10 @@ public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 	    
 	    @ProcessElement
 	    public void processElement(ProcessContext c) {
-	    	//parse the message and get filename and label
+	    	//parse the message and get filePath and label
+	    	String toto = BUCKET_NAME;
 	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
+	    	String label = msg.substring(msg.indexOf("label")+8, msg.length()); // TODO test
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
             String pathToFileIn = "<your BUCKETIN path>" + fileName;
