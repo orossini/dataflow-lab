@@ -25,5 +25,5 @@ gsutil mb -c regional -l us-west1 gs://$PROJECTID-temp
 gcloud iot registries create $PROJECTID-iotregistry --project=$PROJECTID --region=us-central1 --event-notification-config=topic=$TOPIC_URI
 gcloud iam service-accounts create sa-iotdevice --display-name "sa-iotdevice"
 gcloud projects add-iam-policy-binding $PROJECTID --member serviceAccount:sa-iotdevice@$PROJECTID.iam.gserviceaccount.com --role roles/storage.objectCreator
-gcloud iam service-accounts keys create ~/sa-key.p12 --iam-account sa-iotdevice@$PROJECTIDD.iam.gserviceaccount.com
+gcloud iam service-accounts keys create ~/sa-key.p12 --key-file-type="p12" --iam-account=sa-iotdevice@$PROJECTIDD.iam.gserviceaccount.com
  
