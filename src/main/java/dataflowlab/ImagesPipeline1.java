@@ -33,9 +33,9 @@ import java.awt.image.BufferedImage;
 public class ImagesPipeline1 {
 	
 	private static final String PROJECT_ID =  "";
-	private static final String BUCKET_IN_PATH = "";
-	private static final String BUCKET_OUT_PATH = "";
-	private static final String TOPIC_URI =  "";
+	private static final String BUCKET_IN_PATH = "gs://"+PROJECT_ID+"-imagesin";
+	private static final String BUCKET_OUT_PATH = "gs://"+PROJECT_ID+"-imagesout";
+	private static final String TOPIC_URI =  "projects/"+PROJECT_ID+"/topics/iotdata";
 	
 	
 	public static class CopyImages extends DoFn<PubsubMessage, String>{

@@ -40,9 +40,9 @@ import java.awt.image.BufferedImage;
 
 public class ImagesPipelineComplete{
 	private static final String PROJECT_ID =  "";
-	private static final String BUCKET_IN_PATH = "";
-	private static final String BUCKET_OUT_PATH = "";
-	private static final String TOPIC_URI =  "";
+	private static final String BUCKET_IN_PATH = "gs://"+PROJECT_ID+"-imagesin";
+	private static final String BUCKET_OUT_PATH = "gs://"+PROJECT_ID+"-imagesout";
+	private static final String TOPIC_URI =  "projects/"+PROJECT_ID+"/topics/iotdata";
 
 	public static class RotateImages90 extends DoFn<PubsubMessage, String>{
 		
@@ -236,7 +236,7 @@ public class ImagesPipelineComplete{
 	    	//parse the message and get filePath and label
 	    	
 	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf("label")+8, msg.length()); // TODO test
+	    	String label = msg.substring(msg.indexOf(",")+1, msg.length()); // TODO adapt to Android Things app code to parse JSON data
 	    	label = label.trim().toLowerCase();
             String fileName = msg.substring(0,msg.indexOf(","));          
             String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
