@@ -28,6 +28,7 @@ import javax.imageio.ImageIO;
 import org.imgscalr.Scalr;
 import org.imgscalr.Scalr.Rotation;
 import java.awt.image.BufferedImage;
+import org.json.*;
 
 
 public class ImagesPipeline1 {
@@ -44,6 +45,7 @@ public class ImagesPipeline1 {
 	    
 	    @ProcessElement
 	    public void processElement(ProcessContext c) {
+			// TODO: complete the code here
 	    	//Parse the message and get filename and label
 	    	
   	        //Build the ResourceIds and related list (for bucket in and bucket out)

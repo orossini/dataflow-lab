@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="018cb770-8990-4360-be86-1b50c57a815e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipelineComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipelineComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup-script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/startup-script.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="ImagesPipelineComplete.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipelineComplete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+            <state relative-caret-position="474">
+              <caret line="304" column="4" lean-forward="true" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,9 +27,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ImagesPipeline1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1600" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BUCKET_OUT_PATH</find>
+    </findStrings>
     <replaceStrings>
       <replace>&quot;image&quot;; //UUID.randomUUID().toString();</replace>
     </replaceStrings>
@@ -40,6 +63,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipelineComplete.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java" />
       </list>
     </option>
   </component>
@@ -186,6 +210,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="59" width="1400" height="760" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -218,10 +243,25 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipelineComplete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+        <state relative-caret-position="474">
+          <caret line="304" column="4" lean-forward="true" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

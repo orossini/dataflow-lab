@@ -9,8 +9,8 @@ echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> ~/.profile
 echo "export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin" >> ~/.profile
 wget http://www-us.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
 tar xzvf apache-maven-3.5.3-bin.tar.gz
-export PATH=$PATH:/apache-maven-3.5.3/bin
-echo "export PATH=$PATH:/apache-maven-3.5.3/bin" >> ~/.profile
+export PATH=$PATH:~/dataflow-lab/apache-maven-3.5.3/bin
+echo "export PATH=$PATH:~/dataflow-lab/apache-maven-3.5.3/bin" >> ~/.profile
 gcloud pubsub topics create iotdata
 export TOPIC_URI=projects/$PROJECTID/topics/iotdata
 echo "export TOPIC_URI=projects/$PROJECTID/topics/iotdata" >> ~/.profile
