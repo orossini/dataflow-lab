@@ -36,10 +36,13 @@ import javax.imageio.ImageIO;
 import org.imgscalr.Scalr;
 import org.imgscalr.Scalr.Rotation;
 import java.awt.image.BufferedImage;
+import org.json.*;
+import java.util.UUID;
+
 
 
 public class ImagesPipelineComplete{
-	private static final String PROJECT_ID =  "";
+	private static final String PROJECT_ID =  "iot-test-178519";
 	private static final String BUCKET_IN_PATH = "gs://"+PROJECT_ID+"-imagesin";
 	private static final String BUCKET_OUT_PATH = "gs://"+PROJECT_ID+"-imagesout";
 	private static final String TOPIC_URI =  "projects/"+PROJECT_ID+"/topics/iotdata";
@@ -50,11 +53,19 @@ public class ImagesPipelineComplete{
 	    
 	    @ProcessElement
 	    public void processElement(ProcessContext c) {
-	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
-	    	label = label.trim().toLowerCase();
-            String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = BUCKET_IN_PATH +"/"  + fileName;
+			String msg = new String(c.element().getPayload());
+			JSONObject msgJson = new JSONObject(msg);
+
+			//	String label = msg.substring(msg.indexOf(",")+1, msg.length());
+			String label = msgJson.getString("label");
+			label = label.trim().toLowerCase();
+
+			//    String fileName = msg.substring(0,msg.indexOf(","));
+			//String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
+			String pathToFileIn = msgJson.getString("filePath");
+
+			String fileName = "image.jpeg";
+
             Instant timestamp = Instant.now();
   	        String pathToFileOut = BUCKET_OUT_PATH +"/" + label + "/" + timestamp.toString() + "-rot90-" + fileName;
   	        
@@ -97,12 +108,20 @@ public class ImagesPipelineComplete{
 	    
 	    @ProcessElement
 	    public void processElement(ProcessContext c) {
-	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
-	    	label = label.trim().toLowerCase();
-            String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = BUCKET_IN_PATH +"/"  + fileName;
-            Instant timestamp = Instant.now();
+			String msg = new String(c.element().getPayload());
+			JSONObject msgJson = new JSONObject(msg);
+
+			//	String label = msg.substring(msg.indexOf(",")+1, msg.length());
+			String label = msgJson.getString("label");
+			label = label.trim().toLowerCase();
+
+			//    String fileName = msg.substring(0,msg.indexOf(","));
+			//String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
+			String pathToFileIn = msgJson.getString("filePath");
+
+			String fileName = "image.jpeg"; //UUID.randomUUID().toString();;
+
+			Instant timestamp = Instant.now();
   	        String pathToFileOut = BUCKET_OUT_PATH +"/" + label + "/" + timestamp.toString() + "-rot270-" + fileName;
   	        
             ReadableByteChannel rChan;
@@ -141,12 +160,20 @@ public class ImagesPipelineComplete{
 	    
 	    @ProcessElement
 	    public void processElement(ProcessContext c) {
-	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
-	    	label = label.trim().toLowerCase();
-            String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = BUCKET_IN_PATH +"/"  + fileName;
-            Instant timestamp = Instant.now();
+			String msg = new String(c.element().getPayload());
+			JSONObject msgJson = new JSONObject(msg);
+
+			//	String label = msg.substring(msg.indexOf(",")+1, msg.length());
+			String label = msgJson.getString("label");
+			label = label.trim().toLowerCase();
+
+			//    String fileName = msg.substring(0,msg.indexOf(","));
+			//String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
+			String pathToFileIn = msgJson.getString("filePath");
+
+			String fileName = "image.jpeg"; //UUID.randomUUID().toString();;
+
+			Instant timestamp = Instant.now();
   	        String pathToFileOut = BUCKET_OUT_PATH +"/" + label + "/" + timestamp.toString() + "-flipV-" + fileName;
   	        
             ReadableByteChannel rChan;
@@ -187,12 +214,20 @@ public class ImagesPipelineComplete{
 	    
 	    @ProcessElement
 	    public void processElement(ProcessContext c) {
-	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf(",")+1, msg.length());
-	    	label = label.trim().toLowerCase();
-            String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = BUCKET_IN_PATH + "/" + fileName;
-            Instant timestamp = Instant.now();
+			String msg = new String(c.element().getPayload());
+			JSONObject msgJson = new JSONObject(msg);
+
+			//	String label = msg.substring(msg.indexOf(",")+1, msg.length());
+			String label = msgJson.getString("label");
+			label = label.trim().toLowerCase();
+
+			//    String fileName = msg.substring(0,msg.indexOf(","));
+			//String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
+			String pathToFileIn = msgJson.getString("filePath");
+
+			String fileName = "image.jpeg"; //UUID.randomUUID().toString();;
+
+			Instant timestamp = Instant.now();
   	        String pathToFileOut = BUCKET_OUT_PATH +"/" + label + "/" + timestamp.toString() + "-gray-" + fileName;
   	        
             ReadableByteChannel rChan;
@@ -236,11 +271,19 @@ public class ImagesPipelineComplete{
 	    	//parse the message and get filePath and label
 	    	
 	    	String msg = new String(c.element().getPayload());
-	    	String label = msg.substring(msg.indexOf(",")+1, msg.length()); // TODO adapt to Android Things app code to parse JSON data
+	    	JSONObject msgJson = new JSONObject(msg);
+
+	    //	String label = msg.substring(msg.indexOf(",")+1, msg.length());
+	    	String label = msgJson.getString("label");
 	    	label = label.trim().toLowerCase();
-            String fileName = msg.substring(0,msg.indexOf(","));          
-            String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
-            Instant timestamp = Instant.now();
+
+        //    String fileName = msg.substring(0,msg.indexOf(","));
+            //String pathToFileIn = BUCKET_IN_PATH +"/" + fileName;
+			String pathToFileIn = msgJson.getString("filePath");
+
+			String fileName = "image.jpeg"; //UUID.randomUUID().toString();;
+
+			Instant timestamp = Instant.now();
   	        String pathToFileOut = BUCKET_OUT_PATH + "/" + label + "/" + timestamp.toString() + "-copy-" + fileName;
   	        //build the ResourceIds and related list (in and out)
 	  	    List<ResourceId> listIn = new ArrayList<ResourceId> ();   

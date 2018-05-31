@@ -1,0 +1,8 @@
+dataflowlab/ImagesPipelineComplete.class
+dataflowlab/ImagesPipelineComplete$FlipImages.class
+dataflowlab/ImagesPipelineComplete$GrayImages.class
+dataflowlab/ImagesPipeline1$CopyImages.class
+dataflowlab/ImagesPipelineComplete$CopyImages.class
+dataflowlab/ImagesPipelineComplete$RotateImages90.class
+dataflowlab/ImagesPipelineComplete$RotateImages270.class
+dataflowlab/ImagesPipeline1.class
