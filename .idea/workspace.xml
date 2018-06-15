@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="018cb770-8990-4360-be86-1b50c57a815e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataflowlab/ImagesPipeline1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup-script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/startup-script.sh" afterDir="false" />
-    </list>
+    <list default="true" id="018cb770-8990-4360-be86-1b50c57a815e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,7 +65,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="59" />
+    <option name="x" value="2555" />
+    <option name="y" value="150" />
     <option name="width" value="1400" />
     <option name="height" value="760" />
   </component>
@@ -210,7 +208,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="59" width="1400" height="760" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
