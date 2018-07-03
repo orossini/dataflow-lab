@@ -3,6 +3,7 @@ sudo apt-get install -y openjdk-8-jdk
 # java will be installed in /usr/lib/jvm/java-8-openjdk-amd64/
 echo 'ID=$(curl "http://metadata.google.internal/computeMetadata/v1/project/project-id" -H "Metadata-Flavor: Google")' | sudo tee -a /etc/bash.bashrc
 echo 'export PROJECTID=$ID' | sudo tee -a /etc/bash.bashrc
+export PROJECTID=$(curl "http://metadata.google.internal/computeMetadata/v1/project/project-id" -H "Metadata-Flavor: Google")
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/' | sudo tee -a /etc/bash.bashrc
 echo 'export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin' | sudo tee -a /etc/bash.bashrc
 sudo mkdir -p /home/devtools/
