@@ -14,7 +14,7 @@ echo 'export PATH=$PATH:/home/devtools/apache-maven-3.5.3/bin' | sudo tee -a /et
 gcloud pubsub topics create iotdata
 sudo echo 'export TOPIC_URI=projects/$PROJECTID/topics/iotdata' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-imagesin
-sudo echo 'export BUCKET_IN_PATH=gs://$PROJECTID-imagesin' | sudo tee -a /etc/bash.bashrc
+echo 'export BUCKET_IN_PATH=gs://$PROJECTID-imagesin' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-imagesout
 sudo echo 'export BUCKET_OUT_PATH=gs://$PROJECTID-imagesout' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-dataflowstagging
