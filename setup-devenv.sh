@@ -12,11 +12,11 @@ sudo -p /home/devtools/ wget http://www-us.apache.org/dist/maven/maven-3/3.5.3/b
 sudo tar xzvf /home/devtools/apache-maven-3.5.3-bin.tar.gz
 echo 'export PATH=$PATH:/home/devtools/apache-maven-3.5.3/bin' | sudo tee -a /etc/bash.bashrc
 gcloud pubsub topics create iotdata
-sudo echo 'export TOPIC_URI=projects/$PROJECTID/topics/iotdata' | sudo tee -a /etc/bash.bashrc
+echo 'export TOPIC_URI=projects/$PROJECTID/topics/iotdata' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-imagesin
 echo 'export BUCKET_IN_PATH=gs://$PROJECTID-imagesin' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-imagesout
-sudo echo 'export BUCKET_OUT_PATH=gs://$PROJECTID-imagesout' | sudo tee -a /etc/bash.bashrc
+echo 'export BUCKET_OUT_PATH=gs://$PROJECTID-imagesout' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-dataflowstagging
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-temp
 gcloud iot registries create $PROJECTID-iotregistry --project=$PROJECTID --region=us-central1 --event-notification-config=topic=$TOPIC_URI

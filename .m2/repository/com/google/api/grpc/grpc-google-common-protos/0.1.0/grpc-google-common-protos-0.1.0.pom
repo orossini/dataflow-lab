@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.google.api.grpc</groupId>
+  <artifactId>grpc-google-common-protos</artifactId>
+  <version>0.1.0</version>
+  <name>com.google.api.grpc:grpc-google-common-protos</name>
+  <description>GRPC library for grpc-google-common-protos</description>
+  <url>https://github.com/googleapis/googleapis</url>
+  <licenses>
+    <license>
+      <name>Apache-2.0</name>
+      <url></url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>googleapis-packages@google.com</id>
+      <name>Google Inc</name>
+      <email>googleapis-packages@google.com</email>
+      <url>https://github.com/googleapis/googleapis</url>
+      <organization>Google, Inc.</organization>
+      <organizationUrl>https://www.google.com</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:svn:https://github.com/google/googleapis.git</connection>
+    <developerConnection>scm:svn:git@github.com:google/googleapis.git</developerConnection>
+    <url>https://github.com/google/googleapis</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-all</artifactId>
+      <version>1.0.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>3.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
