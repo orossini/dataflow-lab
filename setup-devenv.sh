@@ -13,6 +13,7 @@ sudo tar xzvf /home/devtools/apache-maven-3.5.3-bin.tar.gz
 cp -R ~/dataflow-lab/.m2 ~/
 echo 'export PATH=$PATH:/home/devtools/apache-maven-3.5.3/bin' | sudo tee -a /etc/bash.bashrc
 gcloud pubsub topics create iotdata
+export TOPIC_URI=projects/$PROJECTID/topics/iotdata
 echo 'export TOPIC_URI=projects/$PROJECTID/topics/iotdata' | sudo tee -a /etc/bash.bashrc
 gsutil mb -c regional -l us-west1 gs://$PROJECTID-imagesin
 echo 'export BUCKET_IN_PATH=gs://$PROJECTID-imagesin' | sudo tee -a /etc/bash.bashrc
